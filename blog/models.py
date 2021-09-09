@@ -1,4 +1,5 @@
 from django.db import models
+from markdownx.models import MarkdownxField
 
 # Create your models here.
 
@@ -15,9 +16,7 @@ class BlogPost(models.Model):
         max_length=200        # 最大文字数は200
         )
     # 本文用のフィールド
-    content = models.TextField(
-        verbose_name='本文'   # フィールドのタイトル
-        )
+    content = MarkdownxField('本文')
     # 投稿日時のフィールド
     posted_at = models.DateTimeField(
         verbose_name='投稿日時', # フィールドのタイトル
