@@ -1,5 +1,6 @@
 <!-- ベーステンプレートを適用する -->
 {% extends 'base.html' %}
+{% load app %}
 <!--
  静的ファイルのURLを生成するstaticは
  個々のページで読み込むことが必要
@@ -46,11 +47,8 @@
 <h3 class="post-subtitle">
   <!-- サブタイトルの文字サイズを16ptにする -->
   <span style="font-size : 16pt">
-<!--
- contentフィールドを出力
- truncatecharsで出力する文字数を50以内に制限
--->
-{{record.content|truncatechars:50}}
+
+{{record.content|markdown_to_html}}
   </span>
 </h3>
   </a>
