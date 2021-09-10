@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-rrierj6*4stjf90&5v!-s00(mo#0%jd!q$w(8#@idtoq$&e-k8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["yukitoro.com"]
-#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ["yukitoro.com"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -67,7 +67,11 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            #'libraries':{
+             #   'app': 'templatetags.app',
+            #}
         },
+         
     },
 ]
 
@@ -78,7 +82,6 @@ WSGI_APPLICATION = 'firstProject.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
-"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -99,7 +102,7 @@ DATABASES = {
     }
 }
 
-
+"""
 
 
 # Password validation
