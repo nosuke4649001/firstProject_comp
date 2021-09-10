@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-rrierj6*4stjf90&5v!-s00(mo#0%jd!q$w(8#@idtoq$&e-k8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["yukitoro.com"]
 #ALLOWED_HOSTS = []
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'markdownx',
 ]
 
 MIDDLEWARE = [
