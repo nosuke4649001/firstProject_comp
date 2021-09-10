@@ -40,11 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
-<<<<<<< HEAD
-    'markdownx',
-=======
     'markdownx',  
->>>>>>> b0254daaf1feb3a7a4673f4c3cbb6ebbd8bfd450
 ]
 
 MIDDLEWARE = [
