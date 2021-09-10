@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,7 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+<<<<<<< HEAD
     'markdownx',
+=======
+    'markdownx',  
+>>>>>>> b0254daaf1feb3a7a4673f4c3cbb6ebbd8bfd450
 ]
 
 MIDDLEWARE = [
@@ -75,6 +80,8 @@ WSGI_APPLICATION = 'firstProject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
+
 """
 DATABASES = {
     'default': {
@@ -95,6 +102,7 @@ DATABASES = {
             
     }
 }
+
 
 
 
@@ -136,6 +144,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
  
 # constantsをインポート

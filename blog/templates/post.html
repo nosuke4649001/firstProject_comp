@@ -1,5 +1,6 @@
 <!-- ベーステンプレートを適用する -->
 {% extends 'base.html' %}
+{% load app %}
 <!--
  静的ファイルのURLを生成するstaticタグのロードは
  個々のページで行うことが必要
@@ -36,7 +37,7 @@
     <h2>タグの要素を書き換える
     レコードをobjectで参照し、contentフィールドの値を30文字以内で出力
     -->
-    <h2 class="subheading">{{object.content|truncatechars:30}}</h2>
+    <h2 class="subheading">{{object.content| markdown_to_html }}</h2>
     <span class="meta">
     <!-- 投稿日時とカテゴリ -->
     <!-- トップページにリンクする -->
