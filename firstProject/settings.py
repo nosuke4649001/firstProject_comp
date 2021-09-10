@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-rrierj6*4stjf90&5v!-s00(mo#0%jd!q$w(8#@idtoq$&e-k8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["yukitoro.com"]
-#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ["yukitoro.com"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'firstProject.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -98,6 +98,7 @@ DATABASES = {
             
     }
 }
+"""
 
 
 
