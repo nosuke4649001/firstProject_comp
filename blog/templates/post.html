@@ -8,7 +8,7 @@
 {% load static %}
 <!-- ヘッダー情報のページタイトルは
   ベーステンプレートを利用するページで設定する -->
-{% block title %}Django's Blog{% endblock %}
+{% block title %}ユキトロBlog{% endblock %}
 
 <!--
   <!DOCTYPE html>以下、<head>～</head>まで
@@ -37,11 +37,10 @@
     <h2>タグの要素を書き換える
     レコードをobjectで参照し、contentフィールドの値を30文字以内で出力
     -->
-    <h2 class="subheading">{{object.content| markdown_to_html }}</h2>
-    <span class="meta">
+ 
     <!-- 投稿日時とカテゴリ -->
     <!-- トップページにリンクする -->
-    <a href={% url 'blog:index' %}>Django's Blog</a>
+    <a href={% url 'blog:index' %}>ユキトロBlog</a>
     <!-- 投稿日時を出力としてposted_atフィールドを出力 -->
     {{object.posted_at}}に投稿／カテゴリ:
 <!-- categoryフィールドを出力-->
@@ -66,7 +65,7 @@
 <p>～</p>の要素とすることで全体を1つの段落にする
 -->
 <div class="col-md-10 col-lg-8 col-xl-7">
-　　<p>{{object.content}}</p>
+　　<p>{{object.content| markdown_to_html}}</p>
 </div>
   </div>
 </div>
