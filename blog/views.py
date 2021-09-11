@@ -53,11 +53,11 @@ class ScienceView(ListView):
     # クラス変数modelにモデルBlogPostを設定
     model = BlogPost
     # object_listキーの別名を設定
-    context_object_name = 'science_records'
+    context_object_name = 'Python_records'
     # category='science'のレコードを抽出して
     # 投稿日時の降順で並べ替える
     queryset = BlogPost.objects.filter(
-        category='science').order_by('-posted_at')
+        category='Python').order_by('-posted_at')
     # 1ページに表示するレコードの件数
     paginate_by = 2
 
@@ -74,7 +74,7 @@ class DailylifeView(ListView):
     # category='dailylife'のレコードを抽出して
     # 投稿日時の降順で並べ替える
     queryset = BlogPost.objects.filter(
-        category='dailylife').order_by('-posted_at')
+        category='プログラミング').order_by('-posted_at')
     # 1ページに表示するレコードの件数
     paginate_by = 2
 
@@ -91,7 +91,7 @@ class MusicView(ListView):
     # category='music'のレコードを抽出して
     # 投稿日時の降順で並べ替える
     queryset = BlogPost.objects.filter(
-        category='music').order_by('-posted_at')
+        category='その他').order_by('-posted_at')
     # 1ページに表示するレコードの件数
     paginate_by = 2
 class ContactView(FormView):
