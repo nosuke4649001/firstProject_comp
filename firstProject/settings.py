@@ -99,6 +99,12 @@ DATABASES = {
     }
 }
 
+# 見出しを使う場合は、tocを入れましょう。
+MARKDOWNX_MARKDOWN_EXTENSIONS = [
+    'markdown.extensions.toc',
+]
+# 2000, 2000 ぐらいの画像まではリサイズさせない。
+MARKDOWNX_IMAGE_MAX_SIZE = {'size': (3000, 3000), 'quality': 100}
 
 
 
