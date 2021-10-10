@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+from datetime import datetime
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,8 +27,8 @@ SECRET_KEY = 'django-insecure-rrierj6*4stjf90&5v!-s00(mo#0%jd!q$w(8#@idtoq$&e-k8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["yukitoro.com"]
-#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ["yukitoro.com"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'firstProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -97,13 +98,15 @@ DATABASES = {
             
     }
 }
-
+"""
 # 見出しを使う場合は、tocを入れましょう。
 MARKDOWNX_MARKDOWN_EXTENSIONS = [
     'markdown.extensions.toc',
+    'markdown.extensions.extra',
+    'markdown.extensions.nl2br',    # 改行
 ]
 # 2000, 2000 ぐらいの画像まではリサイズさせない。
-MARKDOWNX_IMAGE_MAX_SIZE = {'size': (3000, 3000), 'quality': 100}
+MARKDOWNX_IMAGE_MAX_SIZE = {'size': (1500, 1500), 'quality': 100}
 
 
 
@@ -148,6 +151,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MARKDOWNX_MEDIA_PATH = datetime.now().strftime('markdownx/%Y/%m/%d')
 
  
 # constantsをインポート

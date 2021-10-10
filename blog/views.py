@@ -30,7 +30,7 @@ class IndexView(ListView):
     # BlogPostのレコードを投稿日時の降順で並べ替える
     queryset = BlogPost.objects.order_by('-posted_at')
      # 1ページに表示するレコードの件数
-    paginate_by = 5
+    paginate_by = 10
 class BlogDetail(DetailView):
     '''詳細ページのビュー
     
