@@ -30,7 +30,7 @@ class IndexView(ListView):
     # BlogPostのレコードを投稿日時の降順で並べ替える
     queryset = BlogPost.objects.order_by('-posted_at')
      # 1ページに表示するレコードの件数
-    paginate_by = 3
+    paginate_by = 10
 class BlogDetail(DetailView):
     '''詳細ページのビュー
     
@@ -59,7 +59,7 @@ class ScienceView(ListView):
     queryset = BlogPost.objects.filter(
         category='Python').order_by('-posted_at')
     # 1ページに表示するレコードの件数
-    paginate_by = 2
+    paginate_by = 5
 
 class DailylifeView(ListView):
     '''日常(dailylife)カテゴリの記事を一覧表示するビュー
@@ -76,7 +76,7 @@ class DailylifeView(ListView):
     queryset = BlogPost.objects.filter(
         category='プログラミング').order_by('-posted_at')
     # 1ページに表示するレコードの件数
-    paginate_by = 2
+    paginate_by = 5
 
 class MusicView(ListView):
     '''音楽(music)カテゴリの記事を一覧表示するビュー
@@ -93,7 +93,7 @@ class MusicView(ListView):
     queryset = BlogPost.objects.filter(
         category='その他').order_by('-posted_at')
     # 1ページに表示するレコードの件数
-    paginate_by = 2
+    paginate_by = 5
 class ContactView(FormView):
     '''問い合わせページを一覧表示するビュー
     

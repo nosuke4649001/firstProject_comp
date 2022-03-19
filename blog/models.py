@@ -1,6 +1,6 @@
 from django.db import models
 from markdownx.models import MarkdownxField
-
+from markdownx.utils import markdownify
 # Create your models here.
 
 class BlogPost(models.Model):
@@ -28,6 +28,8 @@ class BlogPost(models.Model):
         max_length=50,        # 最大文字数は50
         choices=CATEGORY
         )
+    def convert_markdown_to_html(self):
+        return markdownify(self.main_text)
     
     def __str__(self):
         '''オブジェクトを文字列に変換して返す

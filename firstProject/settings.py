@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+from datetime import datetime
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -81,7 +82,11 @@ WSGI_APPLICATION = 'firstProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+<<<<<<< HEAD
 
+=======
+"""
+>>>>>>> f9814dac0d3f401638c8a6fe9e9d719f64e15238
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -102,7 +107,20 @@ DATABASES = {
     }
 }
 
+<<<<<<< HEAD
 """
+=======
+# 見出しを使う場合は、tocを入れましょう。
+MARKDOWNX_MARKDOWN_EXTENSIONS = [
+    'markdown.extensions.toc',
+    'markdown.extensions.extra',
+    'markdown.extensions.nl2br',    # 改行
+]
+# 2000, 2000 ぐらいの画像まではリサイズさせない。
+MARKDOWNX_IMAGE_MAX_SIZE = {'size': (1500, 1500), 'quality': 100}
+
+
+>>>>>>> f9814dac0d3f401638c8a6fe9e9d719f64e15238
 
 
 # Password validation
@@ -145,6 +163,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MARKDOWNX_MEDIA_PATH = datetime.now().strftime('markdownx/%Y/%m/%d')
 
  
 # constantsをインポート

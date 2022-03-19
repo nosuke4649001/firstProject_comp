@@ -50,7 +50,11 @@
  contentフィールドを出力
  truncatecharsで出力する文字数を50以内に制限
 -->
+<<<<<<< HEAD
 {{ record.content | markdown_to_html }}
+=======
+{{ record.content | truncatechars:20 }}
+>>>>>>> f9814dac0d3f401638c8a6fe9e9d719f64e15238
   </span>
 </h3>
   </a>

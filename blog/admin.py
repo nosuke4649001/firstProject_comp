@@ -4,4 +4,3 @@ from markdownx.admin import MarkdownxModelAdmin
 from .models import BlogPost
 
 admin.site.register(BlogPost, MarkdownxModelAdmin)
-
